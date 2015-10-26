@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- 
+
+  This mapping demonstrates 将Java对象映射到数据库
+
+-->
+
+<hibernate-mapping package="com.HQHub.pojo">
+	<class name="F3Airline" table="f_3_airline">
+		<id name="airline_iata">
+			<generator class="native" />
+		</id>
+		<property name="airline_icao" />
+		<property name="short_name" />
+		<property name="host_airport_iata" />
+		<property name="name_xml" />
+		<property name="phone" />
+		<property name="remark" />
+		<property name="address" />
+		<property name="contact_person" />
+		<property name="d_or_i" />
+	</class>
+</hibernate-mapping>

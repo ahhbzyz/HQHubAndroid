@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- This mapping demonstrates 将Java对象映射到数据库 -->
+
+
+<hibernate-mapping package="com.HQHub.pojo">
+	<class name="ParkingSpace" table="t_parking_space">
+		<id name="id">
+			<generator class="native" />
+		</id>
+
+		<property name="parking_area" />
+		<property name="parking_zone" />
+		<property name="parking_space" />
+		
+	</class>
+</hibernate-mapping>

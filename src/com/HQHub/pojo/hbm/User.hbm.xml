@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- 
+
+  This mapping demonstrates 将Java对象映射到数据库
+
+-->
+
+
+<hibernate-mapping package="com.HQHub.pojo">
+	<class name="User" table="t_user">	
+		<id name="id">
+			<generator class="native"/>
+		</id>
+        <property name="username"/>  
+        <property name="password"/>  
+        <property name="phone"/>
+        <property name="create_date"/>        
+	</class>
+</hibernate-mapping>

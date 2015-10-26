@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- This mapping demonstrates 将Java对象映射到数据库 -->
+
+
+<hibernate-mapping package="com.HQHub.pojo">
+	<class name="Booking" table="t_booking">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="phone" />
+		<property name="booked_start_time" />
+		<property name="booked_end_time" />
+		<property name="booked_duration" />
+	    <property name="id_p" />
+
+	</class>
+</hibernate-mapping>

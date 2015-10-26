@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- This mapping demonstrates 将Java对象映射到数据库 -->
+
+<hibernate-mapping package="com.HQHub.pojo">
+	<class name="RRdt" table="r_rdt">
+		<id name="id">
+			<generator class="increment" />
+		</id>
+		<property name="run_date" />
+		<property name="train_no" />
+		<property name="arrive_train_no" />
+		<property name="depart_train_no" />
+		<property name="estimated_arrive_time" />
+		<property name="estimated_depart_time" />
+		<property name="arrive_time" />
+		<property name="depart_time" />
+		<property name="check_time" />
+		<property name="stop_time" />
+		<property name="train_status" />
+
+
+		<property name="abnormalstatus" />
+		<property name="abnormalcause" />
+		<property name="abnormaltime" />
+		<property name="groupno" />
+
+		<many-to-one name="startstation" class="com.HQHub.pojo.RSta" lazy ="false" fetch = "select"
+			insert="false" update="false">
+			<column name="startstation" not-null="true" />
+		</many-to-one>
+
+		<many-to-one name="terminalstation" class="com.HQHub.pojo.RSta" lazy ="false" fetch = "select"
+			insert="false" update="false">
+			<column name="terminalstation" not-null="true" />
+		</many-to-one>
+
+
+	</class>
+</hibernate-mapping>
